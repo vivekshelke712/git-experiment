@@ -19,13 +19,13 @@ app.get('/', (req, res) => {
 
 // const db = mongoose.connection
 
-// db.on('connection', () => {
-//     console.log('mongo db connected')
-// })
+db.on('connection', () => {
+    console.log('mongo db connected')
+})
 
-// db.on('error', () => {
-//     console.log('mongo db not connected')
-// })
+db.on('error', () => {
+    console.log('mongo db not connected')
+})
 
 app.listen(port,db, () => {
     `server running on ${port}`
